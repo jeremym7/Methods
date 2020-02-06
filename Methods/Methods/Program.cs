@@ -4,25 +4,20 @@ namespace Methods
 {
     class Program
     {
-        private static string UName;
-
         static void Main(string[] args)
         {
-            Console.Write("Please enter your name: ");
+            //USer inputs their name
+            Console.WriteLine("Please enter your name: ");
 
             string input = Console.ReadLine();
 
-            UName = input; 
+            UName(input);
+        }
 
-            if (System.Text.RegularExpressions.Regex.IsMatch(input, "[a-zA-Z]")) 
-            {
-                Console.WriteLine("Hello " + UName + "!");
-            }
-
-            else 
-            {
-                Console.WriteLine("Please enter alphabetical letters only, and try again.");
-            }
+        private static void UName(string input) 
+        {
+            //Shows user hello and their name thei inputed
+            Console.WriteLine("Hello " + input + "!");
         }
     }
 }
